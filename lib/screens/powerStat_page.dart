@@ -3,8 +3,7 @@ import 'dart:math';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
-import 'more_info_template.dart';
+import 'package:hero_index/widgets/more_info_template.dart';
 
 class PowerStats extends StatefulWidget {
   PowerStats(

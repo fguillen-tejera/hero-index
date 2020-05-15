@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hero_index/more_info_template.dart';
-import 'package:hero_index/cosume_list_tile.dart';
+import 'package:hero_index/widgets/more_info_template.dart';
+import 'package:hero_index/widgets/cosume_list_tile.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
 class WorkPage extends StatelessWidget {

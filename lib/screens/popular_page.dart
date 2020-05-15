@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'getData.dart';
-import 'package:hero_index/hero_display_page.dart';
+import '../networking/getData.dart';
+import 'package:hero_index/screens/hero_display_page.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class PopularPage extends StatefulWidget {

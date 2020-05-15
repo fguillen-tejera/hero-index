@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:hero_index/appereance_screen.dart';
-import 'package:hero_index/biography_page.dart';
-import 'package:hero_index/connection_page.dart';
-import 'package:hero_index/edu.dart';
-import 'package:hero_index/powerStat_page.dart';
-import 'package:hero_index/work_page.dart';
+import 'package:hero_index/screens/appereance_screen.dart';
+import 'package:hero_index/screens/biography_page.dart';
+import 'package:hero_index/screens/connection_page.dart';
+import 'package:hero_index/widgets/info_button.dart';
+import 'powerStat_page.dart';
+import 'package:hero_index/screens/work_page.dart';
+import 'package:hero_index/widgets/route_animation.dart';
 
 class DisplayPage extends StatefulWidget {
   DisplayPage(
@@ -60,6 +61,7 @@ class DisplayPage extends StatefulWidget {
 }
 
 class _DisplayPageState extends State<DisplayPage> {
+  var transition = RouteAnimation();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,18 +104,6 @@ class _DisplayPageState extends State<DisplayPage> {
                           size: 30,
                         ),
                       ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width / 1.3,
-                      ),
-                      GestureDetector(
-                          child: Icon(
-                            Icons.event,
-                            size: 4,
-                            color: Colors.transparent,
-                          ),
-                          onTap: () {
-                            Navigator.of(context).push(_createRoute(Edu()));
-                          }),
                     ],
                   ),
                 ),
@@ -150,7 +140,8 @@ class _DisplayPageState extends State<DisplayPage> {
                       icon: FontAwesome5Solid.fist_raised,
                       text: 'Power Stats',
                       route: () {
-                        Navigator.of(context).push(_createRoute(PowerStats(
+                        Navigator.of(context)
+                            .push(transition.createRoute(PowerStats(
                           speed: widget.speed,
                           strength: widget.strength,
                           intellect: widget.intellect,
@@ -165,7 +156,8 @@ class _DisplayPageState extends State<DisplayPage> {
                       icon: FontAwesome.book,
                       text: 'Biography',
                       route: () {
-                        Navigator.of(context).push(_createRoute(BiographyPage(
+                        Navigator.of(context)
+                            .push(transition.createRoute(BiographyPage(
                           name: widget.name,
                           image: widget.image,
                           fullName: widget.fullName,
@@ -189,7 +181,7 @@ class _DisplayPageState extends State<DisplayPage> {
                         text: 'Appereance',
                         route: () {
                           Navigator.of(context)
-                              .push(_createRoute(AppereanceScreen(
+                              .push(transition.createRoute(AppereanceScreen(
                             gender: widget.gender,
                             race: widget.race,
                             height: widget.height,
@@ -205,7 +197,8 @@ class _DisplayPageState extends State<DisplayPage> {
                         icon: FontAwesome.briefcase,
                         text: 'Work',
                         route: () {
-                          Navigator.of(context).push(_createRoute(WorkPage(
+                          Navigator.of(context)
+                              .push(transition.createRoute(WorkPage(
                             image: widget.image,
                             name: widget.name,
                             base: widget.base,
@@ -218,7 +211,7 @@ class _DisplayPageState extends State<DisplayPage> {
                         text: 'Connections',
                         route: () {
                           Navigator.of(context)
-                              .push(_createRoute(ConnectionPage(
+                              .push(transition.createRoute(ConnectionPage(
                             image: widget.image,
                             name: widget.name,
                             group: widget.group,
@@ -236,65 +229,4 @@ class _DisplayPageState extends State<DisplayPage> {
       ),
     );
   }
-}
-
-class InfoButton extends StatelessWidget {
-  InfoButton({this.icon, this.text, this.route});
-
-  final IconData icon;
-  final String text;
-  final Function route;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        children: <Widget>[
-          GestureDetector(
-            onTap: () {
-              route();
-            },
-            child: CircleAvatar(
-              radius: MediaQuery.of(context).size.width / 12,
-              backgroundColor: Color(0xFFFF0167),
-              child: Icon(
-                icon,
-                size: MediaQuery.of(context).size.width / 12,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            text,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: MediaQuery.of(context).size.width / 28,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-Route _createRoute(var destinationPage) {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => destinationPage,
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      var begin = Offset(0.0, 1.0);
-      var end = Offset.zero;
-      var curve = Curves.ease;
-
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-
-      return SlideTransition(
-        position: animation.drive(tween),
-        child: child,
-      );
-    },
-  );
 }

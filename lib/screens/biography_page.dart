@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hero_index/cosume_list_tile.dart';
+import 'package:hero_index/widgets/cosume_list_tile.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'more_info_template.dart';
+import '../widgets/more_info_template.dart';
 
 class BiographyPage extends StatelessWidget {
   BiographyPage(
