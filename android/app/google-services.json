@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "116337409978",
+    "firebase_url": "https://hero-index.firebaseio.com",
+    "project_id": "hero-index",
+    "storage_bucket": "hero-index.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116337409978:android:5997f0f40f2b71e50da783",
+        "android_client_info": {
+          "package_name": "com.fernandoguillendelatejera.hero_index"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116337409978-7vd0bn5pl0284ikkdh3q19i6dsaquvvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDadSC_WotnshhAI-GnIMG3OFSM0mpDKgo"
+        }
+      ],
+      "services": {
+        "admob_app_id": "ca-app-pub-2635211345987483~8893317272",
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116337409978-7vd0bn5pl0284ikkdh3q19i6dsaquvvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
