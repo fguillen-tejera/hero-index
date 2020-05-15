@@ -1,23 +1,21 @@
 {
   "images" : [
     {
+      "filename" : "splash 0.jpg",
       "idiom" : "universal",
-      "filename" : "launchicon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "launchicon-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "launchicon-2.png",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

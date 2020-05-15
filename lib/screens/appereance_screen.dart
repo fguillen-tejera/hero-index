@@ -41,32 +41,32 @@ class AppereanceScreen extends StatelessWidget {
           Expanded(
             child: ListView(
               children: <Widget>[
-                MyCostumListTile(
+                MyListTile(
                   icon: FontAwesome5Solid.transgender,
                   mainText: gender,
                   subtext: 'Gender',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: MaterialIcons.person,
                   mainText: race,
                   subtext: 'Race',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: FontAwesome5Solid.ruler_vertical,
                   mainText: height,
                   subtext: 'Height',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: MaterialCommunityIcons.weight,
                   mainText: weight,
                   subtext: 'Weight',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: FontAwesome5Solid.eye,
                   mainText: eye,
                   subtext: 'Eye Color',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: MaterialIcons.color_lens,
                   mainText: hair,
                   subtext: 'Hair Color',

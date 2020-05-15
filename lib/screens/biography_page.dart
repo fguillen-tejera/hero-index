@@ -40,27 +40,27 @@ class BiographyPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: <Widget>[
-                MyCostumListTile(
+                MyListTile(
                   icon: FontAwesome5Solid.id_card,
                   mainText: fullName,
                   subtext: 'Full Name',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: MaterialIcons.location_on,
                   mainText: birthPlace,
                   subtext: 'Place Of Birth',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: Feather.eye,
                   mainText: firstAppearance,
                   subtext: 'First Appereance',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: AntDesign.filetext1,
                   mainText: publisher,
                   subtext: 'Publisher',
                 ),
-                MyCostumListTile(
+                MyListTile(
                   icon: Entypo.text,
                   mainText: alignment,
                   subtext: 'Alignment',

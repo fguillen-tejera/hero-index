@@ -3,19 +3,19 @@ import 'package:hero_index/more_info_template.dart';
 import 'package:hero_index/cosume_list_tile.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-class ConnectionPage extends StatelessWidget {
-  ConnectionPage({this.image, this.name, this.group, this.relatives});
+class WorkPage extends StatelessWidget {
+  WorkPage({this.image, this.name, this.work, this.base});
 
   final String image;
   final String name;
-  final String group;
-  final String relatives;
+  final String work;
+  final String base;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Connections'),
+        title: Text('Work'),
       ),
       body: Column(
         children: <Widget>[
@@ -29,15 +29,15 @@ class ConnectionPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: <Widget>[
-                MyCostumListTile(
-                  icon: MaterialIcons.people,
-                  mainText: group,
-                  subtext: 'Group Affiliation',
+                MyListTile(
+                  icon: MaterialIcons.work,
+                  mainText: work,
+                  subtext: 'Occupation',
                 ),
-                MyCostumListTile(
-                  icon: FontAwesome5Solid.home,
-                  mainText: relatives,
-                  subtext: 'Relatives',
+                MyListTile(
+                  icon: FontAwesome5Solid.warehouse,
+                  mainText: base,
+                  subtext: 'Base',
                 ),
               ],
             ),

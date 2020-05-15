@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyCostumListTile extends StatelessWidget {
-  MyCostumListTile({this.subtext, this.icon, this.mainText});
+class MyListTile extends StatelessWidget {
+  MyListTile({this.subtext, this.icon, this.mainText});
 
   final String mainText;
   final IconData icon;
